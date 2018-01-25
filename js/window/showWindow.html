@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示屏幕的高度和宽度</title>
+
+</head>
+<body>
+
+    <p id="demo"></p>
+    <script>
+        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        document.getElementById("demo").innerHTML = "窗口高度是：" + height + ",窗口宽度是：" + width;
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<head>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+       $("#btn1").click(function() {
+           $("p").append("<b>APPEND TEXT</b>");
+       });
+        $("#btn2").click(function() {
+            $("#oli").append("<li>List Item 4</li>");
+        });
+        $("#btn3").click(function() {
+            $("#bulb").before("<b>before</b>")
+        });
+        $("#btn4").click(function() {
+            $("#bulb").after("<i>after</i>");
+        });
+    });
+</script>
+    <title>显示值</title>
+</head>
+
+<body>
+    <p id="par1">这是段落</p>
+    <p id="par2">这是另一个段落</p>
+    <ol id="oli">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+    </ol>
+    <img src="../image/bulbon.gif" id="bulb" />
+    <button type="button" id="btn1">追加文本</button>
+    <button type="button" id="btn2">追加列表项</button>
+    <button type="button" id="btn3">图片前加东西</button>
+    <button type="button" id="btn4">图片后加东西</button>
+</body>
+</html>

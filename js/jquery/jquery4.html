@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第二个jquery</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button#hide").click(function() {
+                $("p").css("background-color","red");
+            });
+            $("button#show").click(function() {
+                $("p").css("background-color", "white");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>点击按钮文本就会消失！！！</h1>
+    <p>这是一个段落</p>
+    <p>这是另一个段落你看好了</p>
+    <button type="submit" id="hide">点我变颜色噢</button>
+    <button type="button" id="show">点我恢复</button>
+</body>
+</html>

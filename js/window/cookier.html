@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie操作</title>
+    <script>
+        function setCookie(name, value, expiredays) {
+            var exdate = new Date();//设置过期日期
+            exdate.setDate(exdate.getDate()+expiredays);
+            document.cookie = name + "=" + escape(value) +
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

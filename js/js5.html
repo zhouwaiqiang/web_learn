@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变样式</title>
+</head>
+<body>
+    <h1>我的第一段 JavaScript</h1>
+    <p id="demo" style="color: #33CC33">js能够更改样式</p>
+    <button  type="button" onclick="changeStyle()">点我</button>
+    <script>
+        function changeStyle() {
+            x = document.getElementById("demo");
+            if (x.style.color.match("#33CC33")) {
+                x.style.color = "#FFFF99";
+            } else {
+                x.style.color = "#33CC33";
+            }
+        }
+    </script>
+</body>
+</html>

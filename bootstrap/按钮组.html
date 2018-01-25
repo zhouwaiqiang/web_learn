@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮组件</title>
+    <!-- 设置文档编码 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <!--  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="btn-group">
+        <button type="button" class="btn btn-success">按钮1</button>
+        <button type="button" class="btn btn-danger">按钮2</button>
+        <div class="btn-group">
+            <button type="button" class="btn btn-warning dropdown-toggle" id="btnMenu1" data-toggle="dropdown">下拉<span class="caret"></span></button>
+            <ul class="dropdown-menu" labelledby="btnMenu1">
+                <li><a href="#">下拉1</a></li>
+                <li><a href="#">下拉2</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

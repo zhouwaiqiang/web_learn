@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变元素内容</title>
+</head>
+<body>
+    <h1>我的第一段JAVASCRIPT</h1>
+    <p id="test">JS能够改变HTML元素的内容</p>
+    <button type="button" onclick="myFunction()" >点击这里</button>
+    <script>
+        function myFunction() {
+            x = document.getElementById("test");
+            x.innerHTML="哈哈，改变了内容！！！";
+        }
+    </script>
+</body>
+</html>

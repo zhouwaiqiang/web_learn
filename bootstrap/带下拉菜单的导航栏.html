@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航栏</title>
+     <!-- 设置文档编码 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <!--  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <p>标签式导航栏</p>
+    <!--ul class="nav nav-pills"-->
+    <ul class="nav nav-pills">
+    <!--ul class="nav nav-tables"-->
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">SVN</a></li>
+        <li><a href="#">IOS</a></li>
+        <li><a href="#">VB</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" id="dropA" data-toggle="dropdown" href="#">
+                JAVA<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="drop">
+                <li class="dropdown-header">下面所示分割</li>
+                <li><a href="#">SWING</a></li>
+                <li class="divider"></li>
+                <li><a href="#">分离的链接</a></li>
+            </ul>
+        </li>
+        <li><a href="#">PHP</a></li>
+    </ul>
+</body>
+</html>

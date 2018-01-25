@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+    <style type="text/css">
+        body {
+            font-family: "Helvetica","Arial",serif;
+            color: #333;
+            background-color: #ccc;
+            margin:1em 10%;
+        }
+        h1 {
+            color:#333;
+            background-color:transparent;
+        }
+        a {
+            color:#c60;
+            background-color: transparent;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        ul {
+            padding:0;
+        }
+        li {
+            float:left;
+            padding:1em;
+            list-style:none;
+        }
+        img {
+            display:block;
+            clear:both;
+        }
+        #imagegallery {
+            list-style: none;
+        }
+        #imagegallery li {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <ul id="imagegallery">
+        <!--当onclick接收到false的返回值时，不会触发事件响应，可以由此避免链接的跳转-->
+        <li><a href="../image/fireworks.jpg" title="A fireworks display" ><img src="../image/fireworks.jpg" width="100px" height="100px" alt="fireworks" /></a></li>
+        <li><a href="../image/coffee.jpg" title="A cup of coffee" ><img src="../image/coffee.jpg" width="100px" height="100px" alt="coffee" /></a></li>
+        <li><a href="../image/rose.jpg" title="A yellow rose" ><img src="../image/rose.jpg" width="100px" height="100px" alt="rose" /></a></li>
+        <li><a href="../image/bigben.jpg" title="A Big ben" ><img src="../image/bigben.jpg" width="100px" height="100px" alt="bigben" /></a></li>
+    </ul>
+    <!--采用默认占位的方式不显示将该位置占据-->
+    <!--<img id="placeholder" name="IMG" alt="暂时不显示"/>
+    <p id="description">Choose an image</p>-->
+    <script src="showPic.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+    <style type="text/css">
+        body {
+            font-family: "Helvetica","Arial",serif;
+            color: #333;
+            background-color: #ccc;
+            margin:1em 10%;
+        }
+        h1 {
+            color:#333;
+            background-color:transparent;
+        }
+        a {
+            color:#c60;
+            background-color: transparent;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        ul {
+            padding:0;
+        }
+        li {
+            float:left;
+            padding:1em;
+            list-style:none;
+        }
+        img {
+            display:block;
+            clear:both;
+        }
+    </style>
+    <script type="text/javascript">
+        function showPic(whichpic) {
+            var source = whichpic.getAttribute("href");
+            var text = whichpic.getAttribute("title");
+            var placeholder = document.getElementById("placeholder");
+            var descrition = document.getElementById("description");
+            placeholder.setAttribute("src", source);
+            /*这是一种方式可以改变内容的值
+            descrition.innerHTML = text;*/
+            //使用 DOM中的childNodes实现，在childNodes中第一个节点可以用firstChild代替，最后一个可以用lastChild代替
+            //nodeValue可以获得节点变量值
+            descrition.firstChild.nodeValue = text;
+        }
+        function countBodyChildren() {
+            /*getElementsByTagName可以得到body元素，但是该方法是返回所有的body元素，因为在一个html文件中只有一个
+            body元素，所以索引为0，然后通过childNodes属性可以获得所有的子节点
+             */
+            var body_element = document.getElementsByTagName("body")[0];
+            //alert("数量为："+body_element.childNodes.length);
+            alert(body_element.nodeType);
+        }
+    </script>
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <!--当onclick接收到false的返回值时，不会触发事件响应，可以由此避免链接的跳转-->
+        <li><a href="../image/fireworks.jpg" title="A fireworks display" onclick="showPic(this); return false;">Fireworks</a></li>
+        <li><a href="../image/coffee.jpg" title="A cup of coffee" onclick="showPic(this); return false;">Coffee</a></li>
+        <li><a href="../image/rose.jpg" title="A yellow rose" onclick="showPic(this); return false;">Rose</a></li>
+        <li><a href="../image/bigben.jpg" title="A Big ben" onclick="showPic(this); return false;">Bigben</a></li>
+    </ul>
+    <!--采用默认占位的方式不显示将该位置占据-->
+    <img id="placeholder" width="100px" height="100px"  alt="暂时不显示"/>
+    <p id="description">Choose an image</p>
+</body>
+</html>

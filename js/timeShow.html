@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示时间</title>
+    <script>
+        function startTime() {
+            //获取时间对象
+            var today = new Date();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second = today.getSeconds();
+            minute = checkTime(minute);
+            second = checkTime(minute);
+            document.getElementById("txt").innerHTML = hour + ":" + minute + ":" + second;
+            //这个应该是回调线程函数
+            var t = setTimeout('startTime()', 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    <div id="txt"></div>
+</body>
+</html>

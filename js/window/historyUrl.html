@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上下页</title>
+</head>
+<body>
+    <p>目前是第一页HHHHH</p>
+    <button type="button" onclick="goBack()">上一页</button>
+    <button type="button" onclick="goNext()">下一页</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        function goNext() {
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>

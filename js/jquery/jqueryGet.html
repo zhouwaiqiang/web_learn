@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<head>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+       $("#showText").click(function() {
+           alert("Text:" + $("#test").text());
+       });
+        $("#showHtml").click(function() {
+            alert("HTML:" + $("#test").html());
+        });
+    });
+</script>
+    <title>你看看我牛逼不</title>
+</head>
+
+<body>
+    <p id="test">这是段落中的<strong>粗体</strong>文本</p>
+    <button type="button" id="showText">显示文本</button>
+    <button type="button" id="showHtml">显示HTML</button>
+</body>
+</html>

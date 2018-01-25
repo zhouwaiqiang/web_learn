@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <style>
+        body {
+            font-family: "Helvetica","Arial",sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+        table {
+            margin:auto;
+            border:1px solid #699;
+        }
+        caption {
+            margin:auto;
+            padding:.2em;
+            font-size:1.2em;
+            font-weight:bold;
+        }
+        thead {
+            font-weight:normal;
+            font-style:italic;
+            text-align:left;
+            border:1px dotted #699;
+            background-color: #9cc;
+            color:#000;
+        }
+        tr,td {
+            width:10em;
+            padding:.5em;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Itinerary</caption>
+        <thead>
+        <tr>
+            <td>When</td>
+            <td>Where</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>June 9th</td>
+            <td>Portland, OR</td>
+        </tr>
+        <tr>
+            <td>June 10th</td>
+            <td>Seattle,WA</td>
+        </tr>
+        <tr>
+            <td>June 12th</td>
+            <td>Sacramento,CA</td>
+        </tr>
+        </tbody>
+    </table>
+    <script src="higlightRows.js" type="text/javascript"></script>
+</body>
+</html>

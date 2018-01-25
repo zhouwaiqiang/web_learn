@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态创建标记测试</title>
+</head>
+<body>
+    <button type="button" onclick="addElement()">点我试试</button>
+    <div id="testdiv">
+        <p>This is <em>my</em> content.</p>
+    </div>
+
+    <script>
+        function addElement() {
+           // window.onload = function () {
+            //添加出<p>This is <em>my</em> content.</p>的效果
+            //首先得到testdiv标签
+            var testdiv = document.getElementById("testdiv");
+            //添加第一个标签p
+            var para = document.createElement("p");
+            //新建第一个标签内容this is
+            var txt = document.createTextNode("This is ");
+            para.appendChild(txt);
+            //构建第二个标签em
+            var para1 = document.createElement("em");
+            //创建第二个标签内容
+            var txt1 = document.createTextNode("my");
+            para1.appendChild(txt1);
+            para.appendChild(para1);
+            //创建第三个文档
+            var txt2 = document.createTextNode(" content.");
+            para.appendChild(txt2);
+            testdiv.appendChild(para);
+            //}
+        }
+    </script>
+</body>
+</html>

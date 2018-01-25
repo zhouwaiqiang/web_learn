@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淡入淡出</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("p.flip").click(function() {
+                $(".panel").slideDown();
+            });
+            $("p.dlip").click(function() {
+                $(".panel").slideUp();
+            });
+            $("p.fdlip").click(function() {
+                $(".panel").slideToggle();
+            })
+        });
+    </script>
+    <style type="text/css">
+        div.panel,p.flip,p.dlip,p.fdlip {
+            margin:0px;
+            padding:5px;
+            text-align: center;
+            background-color:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        div.panel {
+            height:120px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <p>W3School - 领先的 Web 技术教程站点</p>
+        <p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+    </div>
+    <p class="flip">请点击这里画出</p>
+    <p class="dlip">请点击这里隐藏</p>
+    <p class="fdlip">一进一出</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-DOM例子</title>
+    <script>
+        window.onload = function() {
+            var para = document.getElementById("example");
+            alert(typeof para.nodeName);
+            alert(typeof para.style);
+            alert(para.style.color);
+            alert(para.font);
+        }
+    </script>
+</head>
+<body>
+    <p id="example" style="color:grey;font-family: 'Arial',sans-serif;">
+        An example of a paragraph;
+    </p>
+</body>
+</html>

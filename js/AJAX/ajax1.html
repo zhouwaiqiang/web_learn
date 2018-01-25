@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <script>
+        var xmlHttp;
+        if (windown.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        } else {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState==4 && xmlHttp.status==200) {
+                document.getElementById("myId").innerHTML = xmlHttp.responseText;
+            }
+        }
+        xmlHttp.open("GET", "ajax_info.txt", true);
+        xmlHttp.send();
+    </script>
+</head>
+<body>
+    <div id="myId"><h2>使用AJAX修改该文本内容</h2></div>
+    <button type="button" onclick="loadXMLDoc()">修改内容</button>
+</body>
+</html>

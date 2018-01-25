@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<head>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+       $("#btn1").click(function() {
+           $("#par1").text("Hello World");
+       });
+        $("#btn2").click(function() {
+            $("#par2").html("<b>Hello world</b>");
+        });
+        $("#btn3").click(function() {
+            $("#test").val("HYT");
+        })
+    });
+</script>
+    <title>显示值</title>
+</head>
+
+<body>
+    <p id="par1">这是段落</p>
+    <p id="par2">这是另一个段落</p>
+    <p>Input field:<input type="text" id="test" value="Dove"></p>
+    <button type="button" id="btn1">设置文本</button>
+    <button type="button" id="btn2">设置HTML</button>
+    <button type="button" id="btn3">设置值</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态创建标记测试</title>
+</head>
+<body>
+    <button type="button" onclick="addElement()">点我试试</button>
+    <div id="testdiv">
+        <p>This is <em>my</em> content.</p>
+    </div>
+
+    <script>
+        function addElement() {
+           // window.onload = function () {
+                var para = document.createElement("p");
+                var testdiv = document.getElementById("testdiv");
+                var txt = document.createTextNode("Hello World");
+                para.appendChild(txt);
+                testdiv.appendChild(para);
+            //}
+        }
+    </script>
+</body>
+</html>
